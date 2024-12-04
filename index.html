@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Food</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            color: white;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .header {
+            background: url('eda.jpg') center/cover no-repeat;
+            text-align: center;
+            color: white;
+            padding: 150px 20px 100px;
+            position: relative;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .header h1 {
+            font-size: 50px;
+            margin: 0;
+            animation: pulse 2s infinite;
+        }
+
+        .header p {
+            font-size: 20px;
+            margin: 10px 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #ff5a5f;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .about-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .about img {
+            flex: 1;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .specialities {
+            background: url('hleb.jpg') center/cover no-repeat;
+            text-align: center;
+            color: white;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .specialities::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .specialities-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .specialities h2 {
+            font-size: 36px;
+            margin: 0 0 10px;
+        }
+
+        .menu-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .menu-item {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .menu-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .menu-item h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .menu-item p {
+            font-size: 14px;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .menu-item .btn {
+            padding: 8px 15px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+        .hleb{
+            
+    width: 60%;
+ border: 5px solid #f1cb84;
+border-radius: 20px;
+box-shadow: 0 4px 8px rgba(0, 0,0, 20);
+
+}
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Italian Food</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#specialities">Specialities</a></li>
+            <li><a href="#menu">Menu</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Italian Delicious Food</h1>
+            <p>Call Us!</p>
+            <a href="#menu" class="btn">See More</a>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="about-text">
+            <h2>About us</h2>
+            <p>The Best Food & Drinks</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+    <video class="hleb" controls>
+        <source src="хлебб.mp4">
+    </video>
+        </div>
+        <img src="alal.jpg" alt="Cooking Image">
+    </section>
+
+    <section class="specialities" id="specialities">
+        <div class="specialities-content">
+            <h2>Our Specialities</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+            <a href="#menu" class="btn">See More</a>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <h2>Special Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/736x/79/c8/c9/79c8c95248cc7189b953a5325376999b.jpg" alt="Spaghetti">
+                <h3>Spaghetti</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <a href="#" class="btn">See More</a>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.ytimg.com/vi/qxPvNTV0IWg/maxresdefault.jpg" alt="Lasagna">
+                <h3>Lasagna</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <a href="#" class="btn">See More</a>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.ytimg.com/vi/hElRzcKU214/maxresdefault.jpg" alt="Tiramisu">
+                <h3>Tiramisu</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <a href="#" class="btn">See More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>All rights reserved © Italian Food</p>
+    </footer>
+</body>
+</html>
